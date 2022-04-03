@@ -10,24 +10,24 @@ print(f"{userProduct} x {userQuantity}.")
 regPrice = float(input("What is the regular sales price per item? "))
 # All of the products over $19.99 are 15% OFF
 # All of the products over $39.99 are 25% OFF
-if regPrice > 19.99 and regPrice < 39.99: 
+if regPrice > 19.99 and regPrice <= 39.99: 
     orgPrice = regPrice
     regPrice = regPrice - (regPrice * .15)  
-    print(f"Your new price after the savings is {regPrice:.2f} per item.")
+    print(f"Your new price after the savings is ${regPrice:.2f} per item.")
     # Display the total amount saved.
-    print(f"You Saved {((orgPrice - regPrice) * userQuantity):,.2f}.")
+    print(f"You Saved ${((orgPrice - regPrice) * userQuantity):,.2f}.")
 elif regPrice > 39.99:
     orgPrice = regPrice
     regPrice = regPrice - (regPrice * .25)
-    print(f"Your new price after the savings is {regPrice:.2f}.")
+    print(f"Your new price after the savings is ${regPrice:.2f}.")
     # Display the total amount saved.
-    print(f"You Saved {((orgPrice - regPrice) * userQuantity):,.2f} per item.")
+    print(f"You Saved ${((orgPrice - regPrice) * userQuantity):,.2f} per item.")
 # Calculate the sales tax on the total purchase.
 # Assume a state sales tax rate of 6.5%.
 # The rate should be calculated on the total price of the products after discount savings.
 # Store this value as float in a variable.
 salesTax = (regPrice * userQuantity) * .065 
-print(f"Your sales tax is {salesTax:.2f}.") 
+print(f"Your sales tax is ${salesTax:.2f}.") 
 # Display the total amount due from the customer.
 # Format the output as a fixed point number with two-decimal places, a comma as a thousand separator and the dollar sign.
 totalPrice = (regPrice * userQuantity) + salesTax

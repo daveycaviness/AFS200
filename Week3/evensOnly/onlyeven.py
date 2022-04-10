@@ -1,8 +1,8 @@
 #Prompt the user to enter a positive number. 
 prompt = ("Please input an even number: ")
-x = prompt
+
 def evenOnly() :        
-    for x in range(0, 20, 2):
+    for x in range(0, int(userNum) +1, 2):
         print(x)
 
 active = True

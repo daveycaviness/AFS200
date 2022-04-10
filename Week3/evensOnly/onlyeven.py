@@ -1,5 +1,5 @@
 #Prompt the user to enter a positive number. 
-prompt = ("Please input an even number between 0 and 20: ")
+prompt = ("Please input an even number: ")
 x = prompt
 def evenOnly() :        
     for x in range(0, 20, 2):

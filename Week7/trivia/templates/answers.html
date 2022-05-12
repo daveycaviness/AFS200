@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<htmL lang=""en>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name = "viewport" content=""width=device-width, initial-scale="1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <form action="/"method="GET">
+            <h1 style="text-decoration: underline">Questions that you got right!</h1>
+            {% for question in correctQuestions %}
+                <h3>{{ question.question }}</h3>
+                <h4>Answer: {{ question.getCorrectAnswer() }}</h4>
+            {% endfor %}
+            <h1 style="text-decoration: underline">Questions you got wrong!</h1>
+            {% for question in incorrectQuestions %}
+                <h3>{{ question.question }}</h3>
+                <h4>Correct Answer: {{ question.getCorrectAnswer() }}</h4>
+            {% endfor %}
+            <button type="submit">More Trivia!</button>
+        </form>
+    </body>
+
+</htmL>
